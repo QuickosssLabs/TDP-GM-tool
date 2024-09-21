@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiny Dino Punks GM Tool</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Tiny Dino Punks GM Tool</h1>
+    
+    <!-- Load image -->
+    <input type="file" id="imageLoader" accept="image/*"><br><br>
+
+    <!-- Overlay Selection -->
+    <div id="overlayMenu">
+        <h3>Choose a matching color :</h3>
+        <div class="overlay-container">
+            <img class="overlay-option" src="images/tdp/overlay1.png" alt="Overlay 1" width="100" onclick="selectOverlay('images/tdp/overlay1.png')">
+            <div class="overlay-name">Multiclor GM</div>
+        </div>
+        <div class="overlay-container">
+            <img class="overlay-option" src="images/tdp/overlay2.png" alt="Overlay 2" width="100" onclick="selectOverlay('images/tdp/overlay2.png')">
+            <div class="overlay-name">Multicolor RAWR</div>
+        </div>
+        <div class="overlay-container">
+            <img class="overlay-option" src="images/tdp/overlay3.png" alt="Overlay 3" width="100" onclick="selectOverlay('images/tdp/overlay3.png')">
+            <div class="overlay-name">Purple GM</div>
+        </div>
+        <div class="overlay-container">
+            <img class="overlay-option" src="images/tdp/overlay4.png" alt="Overlay 4" width="100" onclick="selectOverlay('images/tdp/overlay4.png')">
+            <div class="overlay-name">Purple RAWR</div>
+        </div>
+        <div class="overlay-container">
+            <img class="overlay-option" src="images/tdp/overlay5.png" alt="Overlay 5" width="100" onclick="selectOverlay('images/tdp/overlay5.png')">
+            <div class="overlay-name">Multicolor GM Cup</div>
+        </div>
+        <div class="overlay-container">
+            <img class="overlay-option" src="images/tdp/overlay6.png" alt="Overlay 6" width="100" onclick="selectOverlay('images/tdp/overlay6.png')">
+            <div class="overlay-name">Purple GM Cup</div>
+        </div>
+        <div class="overlay-container">
+            <img class="overlay-option" src="images/tdp/overlay7.png" alt="Overlay 7" width="100" onclick="selectOverlay('images/tdp/overlay7.png')">
+            <div class="overlay-name">Multicolor RAWR Cup</div>
+        </div>
+        <div class="overlay-container">
+            <img class="overlay-option" src="images/tdp/overlay8.png" alt="Overlay 8" width="100" onclick="selectOverlay('images/tdp/overlay8.png')">
+            <div class="overlay-name">Purple RAWR Cup</div>
+        </div>
+    </div>
+    
+    <!-- Adjust Overlay -->
+    <div class="controls">
+        <label for="overlaySize">Overlay Size :</label>
+        <input type="range" id="overlaySize" min="10" max="200" value="100">
+        
+        <label for="overlayInsetX">Inset X :</label>
+        <input type="range" id="overlayInsetX" min="-800" max="200" value="0">
+        
+        <label for="overlayInsetY">Inset Y :</label>
+        <input type="range" id="overlayInsetY" min="-800" max="200" value="0">
+    </div>
+    
+    <!--Canvas Zone -->
+    <div id="canvasContainer">
+        <canvas id="imageCanvas"></canvas>
+    </div>
+    
+    <!-- Download Btn -->
+    <button id="downloadBtn">Download</button>
+
+    <!-- Footer -->
+    <footer>
+        <a href="https://opensea.io/collection/tiny-dinopunks">See The Tiny Dino Punks collection on Opensea</a>
+        <p>GM Tool created by <a href="https://twitter.com/0x_Quickosss" target="_blank">Quickosss</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
